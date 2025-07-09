@@ -1,12 +1,4 @@
 
-# 开始更新 Meta 内核
-echo "开始更新 Meta 内核..."
-/usr/share/openclash/openclash_core.sh
-if [ $? -ne 0 ]; then
-  echo "Meta 内核更新失败，请检查日志。"
-  exit 1
-fi
-echo "Meta 内核更新完成！"
 
 # 开始更新 GeoIP 数据库
 echo "开始更新 GeoIP Dat 数据库..."
