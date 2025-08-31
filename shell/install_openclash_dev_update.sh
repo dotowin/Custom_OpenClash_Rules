@@ -131,16 +131,7 @@ fi
 echo "设置更新完成！已切换 OpenClash 更新分支为 Developer，并使用 https://testingcf.jsdelivr.net/ 加速访问 GitHub。"
 echo 
 
-# 调用 OpenClash 自带脚本更新内核
-echo "--------------------[ 更新内核 ]--------------------------"
-echo "开始更新内核..."
-/usr/share/openclash/openclash_core.sh
-if [ $? -ne 0 ]; then
-  echo "内核更新失败，请检查日志。"
-  exit 1
-fi
-echo "内核更新完成！"
-echo 
+
 
 # 调用 OpenClash 自带脚本更新 GeoIP Dat 数据库
 echo "--------------------[ 更新 GeoIP Dat 数据库 ]-------------"
@@ -197,18 +188,6 @@ fi
 echo "大陆 IP 白名单更新完成！"
 echo 
 
-# 调用 OpenClash 自带脚本更新订阅
-echo "--------------------[ 更新订阅 ]--------------------------"
-echo "正在更新订阅..."
-echo 
-/usr/share/openclash/openclash.sh
-if [ $? -ne 0 ]; then
-  echo "订阅更新失败，请检查日志。"
-  exit 1
-fi
-echo 
-echo "订阅更新完成！"
-echo 
 
 sleep 3
 echo "--------------------[ 启动插件 ]--------------------------"
